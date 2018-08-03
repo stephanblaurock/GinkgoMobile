@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Ginkgo" xmlns:localGinkgoCommon="clr-namespace:Ginkgo.Common;assembly=Ginkgo" x:Class="Ginkgo.MainPage">
+	<RelativeLayout BackgroundColor="Black"> 			<!--BackgroundColor="{x:Static localGinkgoCommon:GinkgoAppSettings.AccentColor}"-->
+		<Image Source="kabel.jpg" Opacity="0.3" Aspect="AspectFill"
+                
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+
+			<Grid  RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="120" />
+					<RowDefinition Height="120" />
+					<RowDefinition Height="120" />
+					<RowDefinition Height="120" />
+				</Grid.RowDefinitions>
+				<Button Grid.Row="0" Grid.Column="0" TextColor="White" ContentLayout="Top,4" Text="E-Mails" Image="message_light_100.png" Clicked="Handle_Mails_Clicked"></Button>
+				<Button Grid.Row="0" Grid.Column="1" TextColor="White" ContentLayout="Top,4" Text="Tasks" Image="chat_light_100.png" Clicked="Handle_Tasks_Clicked"></Button>
+				<Button Grid.Row="0" Grid.Column="2" TextColor="White" ContentLayout="Top,4" Text="CTI" Image="phone_light_100.png" Clicked="Handle_CTI_Clicked"></Button>
+				<Button Grid.Row="1" Grid.Column="0" TextColor="White" ContentLayout="Top,4" Text="Kontakte" Image="contact_light_100.png" Clicked="Handle_Kontakte_Clicked"></Button>
+				<Button Grid.Row="2" Grid.Column="0" TextColor="White" ContentLayout="Top,4" Text="Kalender" Image="calendar_light_100.png" Clicked="Handle_Kalender_Clicked"></Button>
+				<Button Grid.Row="2" Grid.Column="1" TextColor="White" ContentLayout="Top,4" Text="Stunden" Image="time_span_light_100.png" Clicked="Handle_Stunden_Clicked"></Button>
+				<Button Grid.Row="3" Grid.Column="0" TextColor="White" ContentLayout="Top,4" Text="Geräte" Image="qr_code_light_100.png" Clicked="Handle_Geraete_Clicked"></Button>
+				<Button Grid.Row="3" Grid.Column="1" TextColor="White" ContentLayout="Top,4" Text="OMS" Image="binders_folder_light_100.png" Clicked="Handle_OMS_Clicked"></Button>
+				<Button Grid.Row="3" Grid.Column="2" TextColor="White" ContentLayout="Top,4" Text="Lager" Image="shopping_cart_loaded_light_100.png" Clicked="Handle_Lager_Clicked"></Button>
+			</Grid>
+		</RelativeLayout>
+</ContentPage>

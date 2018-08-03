@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Ginkgo.Pages.CTI.AnruferlistePage">
+	<ContentPage.Content>
+		<Grid>
+			<ListView Grid.Column="0" Margin="0,3,0,3" ItemsSource="{Binding CallInfos}" VerticalOptions="FillAndExpand" ItemTapped="Handle_ItemTapped">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ImageCell ImageSource="user_dark_50.png" Text="{Binding Name}" Detail="{Binding Detail}"></ImageCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Ginkgo.Pages.Zeit.StempelZeitManualPage"
+			 xmlns:custom="clr-namespace:Ginkgo.Views;assembly=Ginkgo">
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Padding="30" Spacing="40" WidthRequest="400">
+			<Label Text="STEMPEL-KORREKTUR" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+			
+			<Label x:Name="_LabelName" Text="{Binding Name}" FontSize="Large" TextColor="Green" FontAttributes="Bold" HorizontalOptions="Center">
+			</Label>
+			<Label x:Name="_Datum" Text="{Binding Datum, StringFormat='{0:dd.MM.yyyy}'}" FontSize="Large" HorizontalOptions="Center">
+			</Label>
+			<Label x:Name="_Stempelzeiten" Text="{Binding StempelzeitenAsString}" FontSize="Small" HorizontalOptions="Center">
+			</Label>
+			<Label Text="Korrektur:">
+			</Label>
+			<custom:CustomTimePicker24H x:Name="_TimePicker" Time="{Binding ManualTime}" Format="HH:mm"  WidthRequest="200" ></custom:CustomTimePicker24H>
+			<Grid HeightRequest="38" MinimumHeightRequest="38">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*">
+					</ColumnDefinition>
+					<ColumnDefinition Width="*">
+					</ColumnDefinition>
+					<ColumnDefinition Width="*">
+					</ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Button x:Name="_ButtCancel" Grid.Column="0" Text="abbrechen" BackgroundColor="Gray" TextColor="Black" HeightRequest="38" Clicked="Cancel_Handle_Clicked" />
+				<Button x:Name="_ButtDelete" Grid.Column="1" Text="löschen" BackgroundColor="Red" TextColor="White" HeightRequest="38" Clicked="Delete_Handle_Clicked" />
+				<Button x:Name="_ButtAdd" Grid.Column="2" Text="hinzufügen" BackgroundColor="Green" TextColor="White" HeightRequest="38" Clicked="Add_Handle_Clicked" />
+			</Grid>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

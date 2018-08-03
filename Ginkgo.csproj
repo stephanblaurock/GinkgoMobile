@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="LiteDB" Version="4.1.4" />
+    <PackageReference Include="DLToolkit.Forms.Controls.FlowListView" Version="2.0.11" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.3.840" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.1.4.168" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Cross\CrossUtils\CrossUtils.csproj" />
+    <ProjectReference Include="..\..\..\Cross\Modules.Cross\Modules.Cross.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Pages\Zeit\" />
+    <Folder Include="Views\" />
+    <Folder Include="Pages\Mails\" />
+    <Folder Include="Pages\Kontakte\" />
+    <Folder Include="Pages\Messaging\" />
+    <Folder Include="Pages\CTI\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Ginkgo.Pages.Mails.MailMessagesPage">
+<ContentPage.ToolbarItems>
+		<ToolbarItem Order="Primary" Icon="folder_light.png" Text="Item 1" Priority="0" Clicked="HandleToolbutton_Clicked" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<!--<navigationdrawer:SfNavigationDrawer x:Name="_FolderDrawer" DrawerWidth="280" DrawerHeight="1000" VerticalOptions="FillAndExpand" Position="Left" DrawerHeaderHeight="0" DrawerFooterHeight="0" Transition="SlideOnTop" IsOpen="false">
+		<navigationdrawer:SfNavigationDrawer.ContentView>
+			<Grid>
+				<ListView Grid.Column="0" Margin="0,3,0,3" ItemsSource="{Binding Messages}" ItemTapped="Handle_ItemTapped">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<ViewCell.ContextActions>
+									<MenuItem Clicked="ContextMoreClicked" CommandParameter="{Binding .}" Text="..." />
+									<MenuItem Clicked="ContextDeleteClicked" CommandParameter="{Binding .}" Text="löschen" IsDestructive="True" />
+								</ViewCell.ContextActions>
+								<Grid Margin="4,0,4,0">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="*">
+										</ColumnDefinition>
+										<ColumnDefinition Width="Auto">
+										</ColumnDefinition>
+									</Grid.ColumnDefinitions>
+									<Grid.RowDefinitions>
+										<RowDefinition Height="Auto">
+										</RowDefinition>
+										<RowDefinition Height="Auto">
+										</RowDefinition>
+									</Grid.RowDefinitions>
+									<BoxView Grid.RowSpan="2" Color="{Binding MarkerColor}" WidthRequest="5" HorizontalOptions="Start" VerticalOptions="StartAndExpand">
+									</BoxView>
+									<Label Grid.Row="0" Grid.Column="0" Margin="7,0,0,0" Text="{Binding Sender}" TextColor="{Binding TextColor}" FontSize="14" FontAttributes="{Binding FontAttributes}" LineBreakMode="TailTruncation">
+									</Label>
+									<Label Grid.Row="0" Grid.Column="1" Text="{Binding TimeStampText}" FontSize="10" HorizontalOptions="End">
+									</Label>
+									<Label Grid.Row="1" Grid.ColumnSpan="2" Margin="7,0,0,0" Text="{Binding Subject}" TextColor="{Binding TextColor}" FontSize="11" LineBreakMode="TailTruncation">
+									</Label>
+								</Grid>
+
+							</ViewCell>
+
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</Grid>
+		</navigationdrawer:SfNavigationDrawer.ContentView>
+		<navigationdrawer:SfNavigationDrawer.DrawerHeaderView>
+
+		</navigationdrawer:SfNavigationDrawer.DrawerHeaderView>
+		<navigationdrawer:SfNavigationDrawer.DrawerContentView>
+			<Grid BackgroundColor="White">
+				<ListView ItemsSource="{Binding MailFolders}" VerticalOptions="FillAndExpand" ItemTapped="Folderlist_ItemTapped">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<StackLayout Padding="2,2" VerticalOptions="FillAndExpand" Orientation="Horizontal" Spacing="5">
+									<Image Source="folder_dark.png" WidthRequest="30" HeightRequest="30" VerticalOptions="Center" />
+									<Label VerticalOptions="Center" VerticalTextAlignment="Center" Text="{Binding Caption}" FontSize="Medium" TextColor="Black" />
+								</StackLayout>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</Grid>
+		</navigationdrawer:SfNavigationDrawer.DrawerContentView>
+	</navigationdrawer:SfNavigationDrawer>
+-->
+	</ContentPage.Content>
+</ContentPage>

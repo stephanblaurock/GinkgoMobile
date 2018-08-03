@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Ginkgo.Pages.Mails.MailMessagePage">
+<ContentPage.ToolbarItems>
+		<ToolbarItem Order="Primary" Icon="settings_light" Text="Item 1" Priority="0" Clicked="HandleSettings_Clicked" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<ScrollView>
+			<Grid Margin="5,1,5,1">
+				<StackLayout Orientation="Horizontal">
+						<BoxView Grid.RowSpan="2" Color="{Binding Message.MarkerColor}" WidthRequest="5" HorizontalOptions="Start" VerticalOptions="StartAndExpand">
+									</BoxView>
+					<StackLayout Orientation="Vertical">
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Von: " FontSize="14">
+						</Label>
+						<Label Text="{Binding Message.Sender}" FontSize="14">
+						</Label>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="An: " FontSize="13">
+						</Label>
+						<Label Text="{Binding Message.Recipients}" FontSize="13">
+						</Label>
+					</StackLayout>
+					<Label Text="{Binding Message.Subject}" TextColor="{Binding Message.TextColor}" FontAttributes="Bold">
+					</Label>
+					<Label Text="{Binding Message.TimeStampText}" FontSize="11">
+					</Label>
+					<BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand">
+					</BoxView>
+					<Label Text="{Binding Message.BodyPlain}" FontSize="13">
+					</Label>
+				</StackLayout>
+				</StackLayout>
+
+			</Grid>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
